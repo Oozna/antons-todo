@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   const [checkedItems, setCheckedItems] = useState<items[]>([]);
 
   // add on success function to the query
-  const { data: itemsData } = trpc.items.getAll.useQuery({}, {
+  const { data: itemsData } = trpc.items.getAll.useQuery({ project: "hej" }, {
     onSuccess: (items) => {
       setItems(items);
       const checked = items.filter((item) => item.checked)

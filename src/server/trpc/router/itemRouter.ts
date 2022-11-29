@@ -34,6 +34,9 @@ export const itemRouter = router({
             return items
         }),
     getAll: publicProcedure
+        .input(z.object({
+            project: z.string(),
+        }))
         .query(async ({ ctx }) => {
             const items = await ctx.prisma.items.findMany()
             return items
