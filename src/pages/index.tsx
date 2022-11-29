@@ -21,9 +21,12 @@ const Home: NextPage = () => {
     }
   });
 
+
+
   const { mutate: checkItem } = trpc.items.checkItem.useMutation({
     onSuccess: (item) => {
       if (checkedItems.some((it) => it.id === item.id)) {
+        // 
         setCheckedItems((prev) => prev.filter((prevItem) => prevItem.id !== item.id))
       } else {
         setCheckedItems((prev) => [...prev, item])
