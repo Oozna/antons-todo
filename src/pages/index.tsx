@@ -74,7 +74,16 @@ const Home: NextPage = () => {
             const { id, desc, checked } = item;
             return (
               <li key={item.id} className='flex justify-between items-center'>
-                <span onClick={() => checkItem({ id, checked: !checkedItems.some((item) => item.id === id) })}>{desc}</span>
+                <div className='relative'>
+                  <div className='pointer-events-none absolute inset-0 flex origin-left items-center justify-center'>
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: checkedItems.some((item) => item.id === id) ? '100%' : 0 }}
+                      transition={{ duration: 0.2, ease: 'easeInOut' }}
+                      className='h-[2px] w-full bg-violet-600' />
+                  </div>
+                  <span onClick={() => checkItem({ id, checked: !checkedItems.some((item) => item.id === id) })}>{desc}</span>
+                </div>
               </li>)
           })}
         </ul>
@@ -85,7 +94,16 @@ const Home: NextPage = () => {
             const { id, desc, checked } = item;
             return (
               <li key={id} className='flex justify-between items-center'>
-                <span onClick={() => checkItem({ id, checked: !checkedItems.some((item) => item.id === id) })}>{desc}</span>
+                <div className='relative'>
+                  <div className='pointer-events-none absolute inset-0 flex origin-left items-center justify-center'>
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: checkedItems.some((item) => item.id === id) ? '100%' : 0 }}
+                      transition={{ duration: 0.2, ease: 'easeInOut' }}
+                      className='h-[2px] w-full bg-violet-600' />
+                  </div>
+                  <span onClick={() => checkItem({ id, checked: !checkedItems.some((item) => item.id === id) })}>{desc}</span>
+                </div>
               </li>)
           })}
         </ul>
@@ -96,7 +114,16 @@ const Home: NextPage = () => {
             const { id, desc, checked } = item;
             return (
               <li key={id} className='flex justify-between items-center'>
-                <span onClick={() => checkItem({ id, checked: !checkedItems.some((item) => item.id === id) })}>{desc}</span>
+                <div className='relative'>
+                  <div className='pointer-events-none absolute inset-0 flex origin-left items-center justify-center'>
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: checkedItems.some((item) => item.id === id) ? '100%' : 0 }}
+                      transition={{ duration: 0.2, ease: 'easeInOut' }}
+                      className='h-[2px] w-full bg-violet-600' />
+                  </div>
+                  <span onClick={() => checkItem({ id, checked: !checkedItems.some((item) => item.id === id) })}>{desc}</span>
+                </div>
               </li>)
           })}
         </ul>
@@ -106,7 +133,16 @@ const Home: NextPage = () => {
             const { id, desc, checked } = item;
             return (
               <li key={id} className='flex justify-between items-center'>
-                <span onClick={() => checkItem({ id, checked: !checkedItems.some((item) => item.id === id) })}>{desc}</span>
+                <div className='relative'>
+                  <div className='pointer-events-none absolute inset-0 flex origin-left items-center justify-center'>
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: checkedItems.some((item) => item.id === id) ? '100%' : 0 }}
+                      transition={{ duration: 0.2, ease: 'easeInOut' }}
+                      className='h-[2px] w-full bg-violet-600' />
+                  </div>
+                  <span onClick={() => checkItem({ id, checked: !checkedItems.some((item) => item.id === id) })}>{desc}</span>
+                </div>
               </li>)
           })}
         </ul>
@@ -116,7 +152,16 @@ const Home: NextPage = () => {
             const { id, desc, checked } = item;
             return (
               <li key={id} className='flex justify-between items-center'>
-                <span onClick={() => checkItem({ id, checked: !checkedItems.some((item) => item.id === id) })}>{desc}</span>
+                <div className='relative'>
+                  <div className='pointer-events-none absolute inset-0 flex origin-left items-center justify-center'>
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: checkedItems.some((item) => item.id === id) ? '100%' : 0 }}
+                      transition={{ duration: 0.2, ease: 'easeInOut' }}
+                      className='h-[2px] w-full bg-violet-600' />
+                  </div>
+                  <span onClick={() => checkItem({ id, checked: !checkedItems.some((item) => item.id === id) })}>{desc}</span>
+                </div>
               </li>)
           })}
         </ul>
