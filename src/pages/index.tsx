@@ -129,7 +129,7 @@ const Home: NextPage = () => {
         </ul>
         <h2 className="text-2xl text-left font-semibold">Databas</h2>
         <ul className='mt-4'>
-          {items?.filter((item: items) => item.project == "Databas").map((item: items) => {
+          {items?.filter((item: items) => item.project == "DB").map((item: items) => {
             const { id, desc, checked } = item;
             return (
               <li key={id} className='flex justify-between items-center'>
